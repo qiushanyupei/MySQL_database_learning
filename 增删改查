@@ -2,3 +2,14 @@
 UPDATE 表名
 SET 列名1 = 新值1, 列名2 = 新值2, ...
 WHERE 条件;
+查：
+场景1：查询两个表中匹配的数据（INNER JOIN 只返回两边都匹配的记录。LEFT JOIN（左连接）保留表 A 的所有记录，即使在 B 中没有匹配。RIGHT JOIN（右连接）保留表 B 的所有记录，即使在 A 中没有匹配）
+SELECT a.列1, a.列2, b.列3, ...
+FROM 表A AS a
+INNER JOIN 表B AS b
+    ON a.公共字段 = b.公共字段;
+左连接示例：
+SELECT s.id, s.name, c.class_name
+FROM students s
+LEFT JOIN classes c
+    ON s.class_id = c.id;
