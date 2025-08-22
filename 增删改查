@@ -13,3 +13,8 @@ SELECT s.id, s.name, c.class_name
 FROM students s
 LEFT JOIN classes c
     ON s.class_id = c.id;
+场景2：查找表中重复的数据（注意：COUNT(*)是用来统计行数，不会忽略NULL，比COUNT(列名)全面）
+SELECT 列1, 列2, ..., COUNT(*) AS cnt
+FROM 表名
+GROUP BY 列1, 列2, ...
+HAVING COUNT(*) > 1;
