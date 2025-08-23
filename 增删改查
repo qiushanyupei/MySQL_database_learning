@@ -1,3 +1,9 @@
+增：
+INSERT INTO 表名 (列1, 列2, 列3, ...)
+VALUES (值1, 值2, 值3, ...);
+删：
+DELETE FROM 表名
+WHERE 条件;
 改：（不加where条件会导致整张表被修改，不建议）
 UPDATE 表名
 SET 列名1 = 新值1, 列名2 = 新值2, ...
