@@ -1,2 +1,5 @@
 字符集可以选择utf8mb4,utf8mb4 的全称是 "UTF-8 Multibyte 4-byte"
 utf-8一开始直对3个字节进行编码，没有涵盖所有字符，像utf8mb4是对4个字节编码了，能包含emojj等特殊字符
+排序规则选择：
+utf8mb4_general_ci	老版本默认的通用规则，区分不太精细，性能略快。	对排序精度要求不高的项目。
+utf8mb4_unicode_ci	使用 Unicode 标准规则，比 general 更准确。	一般业务系统推荐使用。
